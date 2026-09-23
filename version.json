@@ -1,0 +1,17 @@
+{
+  "app": "Academy World",
+  "version": "3.0.0",
+  "updated": "2026-09-23",
+  "architecture": "clean-rebuild",
+  "notes": [
+    "Reconstrucción completa desde cero.",
+    "Curso SolidWorks integrado de forma nativa.",
+    "12 planos incrustados: sin rutas PDF externas.",
+    "Feedback correcto persistente hasta pulsar Continuar.",
+    "Notas, favoritos, progreso, Boss y diploma.",
+    "Búsqueda global en lecciones.",
+    "Backup e importación.",
+    "PWA y modo offline revisados.",
+    "Diagnóstico interno de archivos locales."
+  ]
+}

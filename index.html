@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6d4cff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="application-name" content="Academy World">
+<meta name="apple-mobile-web-app-title" content="Academy World">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+<title>Academy World 3.0</title>
+</head>
+<body>
+<div id="app" class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✦</div>
+      <div><h1>Academy World</h1><p>Plataforma académica</p></div>
+    </div>
+    <button class="icon-btn" data-go="system" aria-label="Sistema">⚙️</button>
+  </header>
+
+  <main>
+    <section id="home" class="screen active">
+      <div class="hero">
+        <span class="kicker">🌍 Academy World 3.0</span>
+        <h2>Aprende construyendo.</h2>
+        <p>Curso, práctica, plano, vídeo, feedback y progreso en una sola plataforma.</p>
+      </div>
+      <div id="continueCard"></div>
+      <div class="stats">
+        <div class="stat"><small>Cursos</small><strong id="statCourses">0</strong></div>
+        <div class="stat"><small>Módulos</small><strong id="statModules">0</strong></div>
+        <div class="stat"><small>Completados</small><strong id="statDone">0</strong></div>
+        <div class="stat"><small>Boss</small><strong id="statBoss">—</strong></div>
+      </div>
+    </section>
+
+    <section id="courses" class="screen">
+      <div class="hero compact">
+        <span class="kicker">📚 Cursos</span>
+        <h2>Tu biblioteca.</h2>
+        <p>El curso SolidWorks viene instalado. También puedes importar otros cursos compatibles.</p>
+      </div>
+      <div id="courseLibrary" class="stack"></div>
+      <div class="card">
+        <h3>Importar curso JSON</h3>
+        <label class="file-label">Seleccionar archivo<input id="courseFile" type="file" accept=".json,application/json"></label>
+        <div id="importStatus" class="status"></div>
+      </div>
+    </section>
+
+    <section id="search" class="screen">
+      <div class="hero compact">
+        <span class="kicker">🔎 Buscar</span>
+        <h2>Encuentra una lección.</h2>
+      </div>
+      <div class="card">
+        <input id="searchInput" class="search-input" placeholder="Ej.: loft, chapa, weldments, mates...">
+      </div>
+      <div id="searchResults" class="stack"></div>
+    </section>
+
+    <section id="course" class="screen">
+      <div id="courseHeader"></div>
+      <div id="moduleList" class="stack"></div>
+    </section>
+
+    <section id="lesson" class="screen">
+      <div id="lessonHost"></div>
+    </section>
+
+    <section id="system" class="screen">
+      <div class="hero compact">
+        <span class="kicker">⚙️ Sistema</span>
+        <h2>Academy World.</h2>
+        <p>Versión limpia 3.0.0.</p>
+      </div>
+
+      <div class="card">
+        <h3>Diagnóstico</h3>
+        <p>Comprueba estructura del curso, recursos locales y PWA.</p>
+        <button class="btn primary" id="runDiagnostics">Ejecutar diagnóstico</button>
+        <div id="diagnosticStatus" class="status"></div>
+      </div>
+
+      <div class="card">
+        <h3>Actualizaciones</h3>
+        <button class="btn secondary" id="checkUpdates">Buscar actualización</button>
+        <div id="updateStatus" class="status"></div>
+      </div>
+
+      <div class="card">
+        <h3>Copia de seguridad</h3>
+        <p>Exporta cursos, progreso, notas y favoritos.</p>
+        <button class="btn secondary" id="exportBackup">Exportar backup</button>
+        <label class="file-label">Importar backup<input id="backupFile" type="file" accept=".json,application/json"></label>
+        <div id="backupStatus" class="status"></div>
+      </div>
+
+      <div class="card danger-zone">
+        <h3>Restablecer datos</h3>
+        <p>Elimina progreso, notas y cursos importados. El curso incluido se reinstala al recargar.</p>
+        <button class="btn danger" id="resetApp">Restablecer Academy World</button>
+      </div>
+
+      <div class="card">
+        <h3>PWA / Offline</h3>
+        <div id="pwaStatus" class="status show">Comprobando…</div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-go="home"><span>🏠</span>Inicio</button>
+    <button class="nav-btn" data-go="courses"><span>📚</span>Cursos</button>
+    <button class="nav-btn" data-go="search"><span>🔎</span>Buscar</button>
+    <button class="nav-btn" data-go="system"><span>⚙️</span>Sistema</button>
+  </nav>
+</div>
+
+<script src="./bundled-course.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

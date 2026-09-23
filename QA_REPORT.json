@@ -1,0 +1,13 @@
+{
+  "release": "3.0.0",
+  "clean_rebuild": true,
+  "files_total": 13,
+  "modules": 12,
+  "embedded_plans": 12,
+  "videos": 12,
+  "boss_questions": 10,
+  "missing_index_local_refs": [],
+  "pdf_dependencies": 0,
+  "checkpoint_persistent_continue_button": true,
+  "service_worker_cache": true
+}
